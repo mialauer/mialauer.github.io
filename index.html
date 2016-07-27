@@ -57,10 +57,20 @@
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      THIS IS WHAT IS IN MY BUTTON TEXT
+    <div var random_images_array = ["dory.jpg", "mike.jpg", "rex.jpg", merida.jpg", "hank.jpg"];
+    	function getRandomImage(imgAr, path) {
+    	path = path || 'images/'; // default path here
+    	var num = Math.floor( Math.random() * imgAr.length );
+   	 	var img = imgAr[ num ];
+   	 	var imgStr = '<img src="' + path + img + '" alt = "">';
+    	document.write(imgStr); document.close();
+}
+<script type="text/javascript">getRandomImage(random_images_array);</script>
+      
     </div>
   </div>
 </div>
+
 
 
 	</body>
